@@ -92,7 +92,7 @@ LIMITACIONES = [
     "una etiqueta de calidad real.",
 ]
 
-COLORES_CLUSTERS = ["#b0413e", "#3f7cb0", "#3f8f5f"]
+COLORES_CLUSTERS = ["#8c2d3f", "#b56576", "#573750"]
 
 
 @st.cache_data
@@ -179,7 +179,7 @@ def pagina_analisis_general():
         fig = px.histogram(
             df_f, x="alcohol", nbins=30,
             title="Distribución del alcohol",
-            color_discrete_sequence=["#2d6a8c"],
+            color_discrete_sequence=["#b56576"],
         )
         fig.update_layout(xaxis_title="Alcohol (% vol.)", yaxis_title="Vinos", showlegend=False)
         st.plotly_chart(fig, width="stretch")
@@ -188,7 +188,7 @@ def pagina_analisis_general():
     with col3:
         fig = px.scatter(
             df_f, x="alcohol", y="volatile acidity", color="quality",
-            color_continuous_scale="RdYlGn",
+            color_continuous_scale="Sunsetdark",
             title="Alcohol vs acidez volátil (color = calidad)",
             labels={"alcohol": "Alcohol (% vol.)", "volatile acidity": "Acidez volátil (g/L)"},
         )

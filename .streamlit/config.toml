@@ -1,0 +1,7 @@
+# Tema del dashboard: rojo vino
+[theme]
+base = "light"
+primaryColor = "#8c2d3f"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f6ecee"
+textColor = "#313338"
