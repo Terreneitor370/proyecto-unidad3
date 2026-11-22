@@ -117,7 +117,7 @@ def metrica_kpi(df: pd.DataFrame, columna: str, formato: str) -> float:
 # Pagina 1. Analisis general (solo dataset original)
 # ----------------------------------------------------------------
 def pagina_analisis_general():
-    st.title("Análisis general del dataset de vinos tintos")
+    st.title("Análisis de calidad de vinos tintos")
     st.markdown(
         "Exploración del dataset original **Wine Quality (UCI)**: 1,599 vinos "
         "tintos y 11 variables fisicoquimicas + calidad (escala 3 a 8)."
@@ -403,7 +403,7 @@ app = st.navigation(
     ]
 )
 st.set_page_config(
-    page_title="Dashboard · Vinos tintos K-Means",
+    page_title="Análisis de calidad de vinos tintos",
     layout="wide",
 )
 app.run()
