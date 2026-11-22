@@ -293,8 +293,11 @@ def pagina_segmentacion():
         fig.add_trace(
             go.Scatter(
                 x=centroides["alcohol"], y=centroides["volatile acidity"],
-                mode="markers+text", marker=dict(symbol="x", size=14, color="black"),
+                mode="markers+text", marker=dict(symbol="x", size=17,
+                                                 color="#ffffff",
+                                                 line=dict(color="#000000", width=2)),
                 text=["C0", "C1", "C2"], textposition="top center",
+                textfont=dict(size=14, color="#ffffff"),
                 name="Centroides",
             )
         )
