@@ -117,7 +117,7 @@ def metrica_kpi(df: pd.DataFrame, columna: str, formato: str) -> float:
 # Pagina 1. Analisis general (solo dataset original)
 # ----------------------------------------------------------------
 def pagina_analisis_general():
-    st.title("🍷 Análisis general del dataset de vinos tintos")
+    st.title("Análisis general del dataset de vinos tintos")
     st.markdown(
         "Exploración del dataset original **Wine Quality (UCI)**: 1,599 vinos "
         "tintos y 11 variables fisicoquimicas + calidad (escala 3 a 8)."
@@ -202,7 +202,7 @@ def pagina_analisis_general():
         )
         st.plotly_chart(fig, width="stretch")
 
-    with st.expander("📋 Ver los datos filtrados"):
+    with st.expander("Ver los datos filtrados"):
         st.dataframe(df_f, width="stretch")
 
 
@@ -210,7 +210,7 @@ def pagina_analisis_general():
 # Pagina 2. Segmentacion mediante K-Means
 # ----------------------------------------------------------------
 def pagina_segmentacion():
-    st.title("🎯 Segmentación mediante K-Means")
+    st.title("Segmentación mediante K-Means")
     st.markdown(
         "Los vinos se agruparon con **K-Means (K = 3)** usando alcohol, acidez "
         "volátil y sulfatos, escalados con StandardScaler "
@@ -341,7 +341,7 @@ def pagina_segmentacion():
     st.plotly_chart(fig, width="stretch")
 
     # --- Tabla de estadisticas descriptivas por cluster ---
-    st.subheader("📊 Estadísticas descriptivas por clúster")
+    st.subheader("Estadísticas descriptivas por clúster")
     stats = df_f.groupby("nombre_cluster")[VARIABLES + ["quality"]].agg(
         ["count", "mean", "std", "min", "max"]
     ).round(3)
@@ -359,7 +359,7 @@ def pagina_segmentacion():
     st.dataframe(tabla_comparativa, width="stretch")
 
     # --- Comparacion de configuraciones del modelo ---
-    st.subheader("⚙️ Comparación de dos configuraciones del modelo")
+    st.subheader("Comparación de dos configuraciones del modelo")
     st.dataframe(COMPARACION_CONFIGURACIONES, width="stretch")
     st.caption(
         "La inercia no es comparable entre configuraciones (depende del número "
@@ -368,25 +368,25 @@ def pagina_segmentacion():
     )
 
     # --- Descripcion de los grupos ---
-    st.subheader("📝 Descripción de los grupos identificados")
+    st.subheader("Descripción de los grupos identificados")
     for c in clusters_sel:
         with st.expander(f"**Cluster {c} · {NOMBRES_CLUSTERS[c]}**"):
             st.markdown(DESCRIPCION_CLUSTERS[c])
 
     # --- Hallazgos, recomendaciones y limitaciones ---
-    st.subheader("💡 Hallazgos relevantes")
+    st.subheader("Hallazgos relevantes")
     for i, h in enumerate(HALLAZGOS, 1):
         st.markdown(f"{i}. {h}")
 
-    st.subheader("✅ Recomendaciones")
+    st.subheader("Recomendaciones")
     for i, r in enumerate(RECOMENDACIONES, 1):
         st.markdown(f"{i}. {r}")
 
-    st.subheader("⚠️ Limitaciones del modelo")
+    st.subheader("Limitaciones del modelo")
     for i, l in enumerate(LIMITACIONES, 1):
         st.markdown(f"{i}. {l}")
 
-    with st.expander("📋 Ver el dataset con clusters filtrado"):
+    with st.expander("Ver el dataset con clusters filtrado"):
         st.dataframe(df_f, width="stretch")
 
 
@@ -395,13 +395,12 @@ def pagina_segmentacion():
 # ----------------------------------------------------------------
 app = st.navigation(
     [
-        st.Page(pagina_analisis_general, title="Análisis general", icon="🍷"),
-        st.Page(pagina_segmentacion, title="Segmentación K-Means", icon="🎯"),
+        st.Page(pagina_analisis_general, title="Análisis general"),
+        st.Page(pagina_segmentacion, title="Segmentación K-Means"),
     ]
 )
 st.set_page_config(
     page_title="Dashboard · Vinos tintos K-Means",
-    page_icon="🍷",
     layout="wide",
 )
 app.run()
