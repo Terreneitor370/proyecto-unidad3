@@ -214,7 +214,7 @@ def pagina_segmentacion():
     st.markdown(
         "Los vinos se agruparon con **K-Means (K = 3)** usando alcohol, acidez "
         "volátil y sulfatos, escalados con StandardScaler "
-        f"(random_state = {SEMILLA}). El modelo proviene de `codigo/03_kmeans.py`."
+        f"(random_state = {SEMILLA})."
     )
     st.divider()
 
