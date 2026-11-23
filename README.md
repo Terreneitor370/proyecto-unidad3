@@ -75,6 +75,8 @@ cd proyecto-unidad3
 pip install -r requirements.txt
 ```
 
+En Windows, si `pip` falla con el error `WinError 206` (ruta demasiado larga), clona el repositorio en una carpeta con ruta corta, por ejemplo `C:\proyectos`.
+
 **2. Ejecutar los scripts en orden** (cada uno usa el resultado del anterior)
 
 ```bash

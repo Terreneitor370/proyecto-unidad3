@@ -45,7 +45,7 @@ for var in VARIABLES_AMPLIADAS:
 # borrar registros. K-Means es sensible a valores extremos porque usa
 # distancias, pero cada fila es un vino real y no queremos perderlos.
 for var, (inf, sup) in limites.items():
-    df[var] = df[var].clip(lower=inf, upper=sup)
+    df[var] = df[var].clip(lower=inf, upper=sup).round(4)
 
 print("\nEstadisticas de las variables del modelo despues del tratamiento:")
 print(df[VARIABLES_AMPLIADAS].describe().round(3).T[["min", "mean", "max"]])
