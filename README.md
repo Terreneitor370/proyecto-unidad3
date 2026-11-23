@@ -2,7 +2,7 @@
 
 Proyecto integrador de la Unidad 3 de Extracción de Conocimiento en Bases de Datos (IDGS 9-2, UTSLRC).
 
-**Integrantes:** Blanca Isabel Sánchez Celis y Kassie.
+**Integrantes:** Blanca Isabel Sánchez Celis y Kassandra Cuadras Avilez.
 
 ## Descripción
 
