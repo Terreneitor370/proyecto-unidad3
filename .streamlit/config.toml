@@ -1,0 +1,5 @@
+# Tema oscuro con matiz vino: mismos tonos por defecto, solo el fondo tira a vino
+[theme]
+base = "dark"
+backgroundColor = "#1c1116"
+secondaryBackgroundColor = "#2b1c22"
