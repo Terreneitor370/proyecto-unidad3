@@ -57,7 +57,7 @@ DESCRIPCION_CLUSTERS = {
        "(0.41) y los sulfatos mas altos (0.84). La mezcla de baja acidez y buena "
        "conservacion les da una calidad promedio de 5.85 con solo 278 vinos (20%).",
     2: "Los vinos de mayor graduacion alcoholica (11.9% prom.) con acidez "
-       "volatil baja (0.44) y sulfatos intermedios (0.66). Son 344 vinos (26%) y "
+       "volatil baja (0.44) y sulfatos intermedios (0.66). Son 344 vinos (25%) y "
        "alcanzan la mejor calidad promedio: 6.19, con la mayor concentracion de "
        "vinos de calidad 7 y 8.",
 }
@@ -66,7 +66,7 @@ HALLAZGOS = [
     "premium promedia 11.9 grados frente a 9.8 del grupo comun, y a la vez es el "
     "de mejor calidad (6.19 frente a 5.27).",
     "La acidez volatil alta deteriora el perfil: el grupo con mas acidez "
-    "volatil (0.61) concentra 9 de los 9 vinos de calidad 3 y el 82% de los de "
+    "volatil (0.61) concentra 9 de los 10 vinos de calidad 3 y el 75% de los de "
     "calidad 4, mientras el grupo de baja acidez casi no tiene vinos fallidos.",
     "Los sulfatos altos acompanan a los vinos mejor valorados cuando van juntos "
     "de una acidez baja: el grupo equilibrado (0.84 de sulfatos) mejora 0.58 "
